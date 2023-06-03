@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Hege Refsnes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/W3.css">  
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/page1_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Page 1</title>
+</head>
+<body>
+	<header>
+		<h1 id="Back">Clothing Store</h1>
+	</header>
+    
+		<nav>
+		<div class="dropdown">
+			<button class="dropbtn" onclick="toggleDropdown()"><i class="fa fa-list"></i> Menu</button>
+			<div class="dropdown-content column-">
+				<a href="index.html">Home</a>
+				<a href="page1.html">Men</a>
+				<a href="page2.html">Women</a>
+        <a href="gallery.html">gallery</a>
+        <a href="Register and Sign.html">Register/SignUp</a>
+
+			</div>
+		</div>
+
+	</nav>
+
+	<section class="flexbox">
+       
+    <article class="col-s-6 col-3">
+        <h2>Modern Classic</h2>
+        <img class="images" src="image/gallery/modernclassic1.jpg" alt="Modern Classic" onmouseover="onImg.call(this)" onmouseout="outImg.call(this)">
+        <p>A modern classic outfit is a timeless, sophisticated style that combines traditional pieces with modern touches. This may include a well-tailored blazer or dress, paired with minimalist accessories and sleek footwear. <br>Neutral colors such as black, white, and beige are often featured in modern classic outfits, giving a clean and refined appearance. The style emphasizes simplicity and quality over trendiness, making it versatile for various occasions and suitable for people of all ages. Overall, a modern classic outfit exudes elegance and confidence, making it a go-to choice for many fashion-conscious individuals.</p>
+    </article>
+        
+    <article class="col-s-6 col-3">
+        <h2>90s hipster</h2>
+        <img class="images" src="image/gallery/90shipster11.jpg" alt="90s hipster" onmouseover="onImg1.call(this)" onmouseout="outImg1.call(this)">
+        <p>A 90s hipster outfit is a vintage-inspired style that features elements of 90s fashion, often characterized by oversized clothing, flannel shirts, and ripped jeans. The style also includes accessories such as bucket hats, sunglasses, and chunky sneakers. 90s hipster fashion is a nod to the grunge movement of the decade, with an emphasis on individuality and non-conformity. This style has experienced a resurgence in recent years, with many fashion enthusiasts incorporating 90s hipster elements into their wardrobe for a unique, retro look.</p>
+    </article>
+        
+    <article class="col-s-6 col-3">
+        <h2>Hoodies</h2>
+        <img class="images" src="image/gallery/hoddies11.jpg" alt="Hoodies" onmouseover="onImg2.call(this)" onmouseout="outImg2.call(this)">
+        <p>A hoodie outfit is a casual, comfortable style that typically includes a hooded sweatshirt, often made of cotton or fleece, and paired with jeans, joggers, or leggings. Hoodies are versatile and can be worn with or without a jacket, making them suitable for various weather conditions. They also come in a range of colors, designs, and patterns, allowing for personalization and style expression. Overall, a hoodie outfit is a popular, laid-back look that is perfect for everyday wear</p>
+   </article>
+        
+    <article class="col-s-6 col-3">
+        <h2>sport outfit</h2>
+        <img class="images" src="image/gallery/sportes3.jpg" alt="sport outfit" onmouseover="onImg3.call(this)" onmouseout="outImg3.call(this)">
+        <p>A man's sports outfit typically consists of athletic wear designed for comfort and performance during physical activity. This may include a moisture-wicking shirt or tank top, shorts or pants with breathable fabric and stretchy materials, and athletic shoes with good traction and support. Depending on the sport or activity, additional gear such as gloves, knee pads, or helmets may also be necessary. Overall, a man's sports outfit should allow for freedom of movement and temperature regulation to optimize performance and reduce the risk of injury.</p>
+    </article>
+
+    <div class="bookmarks">
+			<a href="#Back"><i class="fa fa-chevron-circle-up" style="font-size:25px;color:blueviolet">go up</i></a>
+			
+	    </div>
+        <br>
+        <script>
+            function onImg ()
+{
+  this.setAttribute("src","image/gallery/modernclassic11.jpg");
+}
+function outImg ()
+{
+  this.setAttribute("src","image/gallery/modernclassic1.jpg");
+}
+/**/ 
+function onImg1 ()
+{
+  this.setAttribute("src","image/gallery/90shipster1.jpg");
+}
+function outImg1 ()
+{
+  this.setAttribute("src","image/gallery/90shipster11.jpg");
+}
+/**/ 
+function onImg2 ()
+{
+  this.setAttribute("src","image/gallery/hoddies1.jpg");
+}
+function outImg2 ()
+{
+  this.setAttribute("src","image/gallery/hoddies11.jpg");
+}
+/**/ 
+function onImg3 ()
+{
+  this.setAttribute("src","image/gallery/sportes33.jpg");
+}
+function outImg3 ()
+{
+  this.setAttribute("src","image/gallery/sportes3.jpg");
+}
+
+        </script>
+	</section>
+    <footer>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/"><img src="image/gallery/facebook.jpg" alt="Icon 1"></a>
+          <a href="https://www.instagram.com/"><img src="image/gallery/insta.jpg" alt="Icon 2"></a>
+          <a href="https://twitter.com/"><img src="image/gallery/twiter.png" alt="Icon 3"></a>
+        </div>
+        <p class="footer-text">© 2023 Clothing Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
