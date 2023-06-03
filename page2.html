@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Hege Refsnes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/W3.css">  
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/page2_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Page 2</title>
+   
+
+
+  </head>
+  <body>
+    <header>
+      <h1 id="back">Clothing Store</h1>
+    </header>
+    <nav>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()"><i class="fa fa-list"></i> Menu</button>
+        <div class="dropdown-content column-">
+          <a href="index.html">Home</a>
+          <a href="page1.html">Men</a>
+          <a href="page2.html">Women</a>
+          <a href="gallery.html">gallery</a>
+        </div>
+      </div>
+
+    </nav>
+
+    
+    <section class="flexbox">
+      <article class="col-s-6 col-3">
+        <h2>Midi Dress</h2>
+        <img src="image/gallery/women1.jpg" alt="Midi Dress" onmouseover="onImg11.call(this)" onmouseout="outImg12.call(this)"/>
+        <p>A midi dress for women is a versatile and stylish option that falls between the knee and ankle in length. It can be dressed up or down for a variety of occasions, and comes in a range of styles and materials. Whether you prefer a classic or bohemian look, there is sure to be a midi dress that fits your personal style.</p>
+      </article>
+
+      <article class="col-s-6 col-3">
+        <h2>T-shirt Dress</h2>
+        <img src="image/gallery/women2.jpg" alt="T-shirt Dress" onmouseover="onImg21.call(this)" onmouseout="outImg22.call(this)"/>
+        <p>A T-shirt dress is a casual and comfortable style of dress for women that is designed to resemble an oversized T-shirt. It is typically made from soft, breathable materials such as cotton or jersey, and falls above the knee in length. T-shirt dresses are a versatile option that can be dressed up with accessories and heels, or dressed down with sneakers and a denim jacket. They are perfect for running errands, going to the beach, or lounging at home, and are a must-have in any woman's wardrobe.</p>
+      </article>
+
+      <article class="col-s-6 col-3">
+        <h2>Wild West style</h2>
+        <img src="image/gallery/women3.jpg" alt="Wild West style" onmouseover="onImg31.call(this)" onmouseout="outImg33.call(this)"/>
+        <p>The Wild West style for women draws inspiration from the fashion trends of the late 19th century American frontier. It is characterized by items such as denim jeans, leather boots, fringe jackets, and cowboy hats. The style often incorporates earthy colors and rustic textures, and can be dressed up or down depending on the occasion. Wild West style is a popular choice for music festivals, western-themed parties, or for adding a touch of Americana to everyday outfits.</p>
+      </article>
+
+      <article class="col-s-6 col-3">
+        <h2>Parisian style</h2>
+        <img src="image/gallery/women4.jpg" alt="Parisian style" onmouseover="onImg41.call(this)" onmouseout="outImg44.call(this)"/>
+        <p>Parisian style for women is a timeless and sophisticated fashion aesthetic that draws inspiration from the effortless chic of French women. It is characterized by classic wardrobe staples such as a well-fitted blazer, a crisp white shirt, a little black dress, and tailored trousers. The style is minimalist, with a focus on quality over quantity, and often incorporates neutral colors such as black, white, navy, and beige. Parisian style is perfect for creating an elegant and refined look that is both stylish and practical for everyday wear.</p>
+      </article>
+      <div class="bookmarks">
+			<a href="#Back"><i class="fa fa-chevron-circle-up" style="font-size:25px;color:blueviolet">go up</i></a>
+			
+	    </div>
+      <br>
+      <script>
+        function onImg11 ()
+{
+  this.setAttribute("src","image/gallery/women11.jpg");
+}
+function outImg12 ()
+{
+  this.setAttribute("src","image/gallery/women1.jpg");
+}
+/**/
+
+function onImg21 ()
+{
+  this.setAttribute("src","image/gallery/women22.jpg");
+}
+function outImg22 ()
+{
+  this.setAttribute("src","image/gallery/women2.jpg");
+}
+/**/
+
+function onImg31 ()
+{
+  this.setAttribute("src","image/gallery/women33.jpg");
+}
+function outImg33 ()
+{
+  this.setAttribute("src","image/gallery/women3.jpg");
+}
+
+/**/
+function onImg41 ()
+{
+  this.setAttribute("src","image/gallery/women44.jpg");
+}
+function outImg44 ()
+{
+  this.setAttribute("src","image/gallery/women4.jpg");
+}
+
+      </script>
+
+    </section>
+    <footer>
+			<div class="footer-icons">
+			  <a href="https://www.facebook.com/"><img src="image/gallery/facebook.jpg" alt="Icon 1"></a>
+			  <a href="https://www.instagram.com/"><img src="image/gallery/insta.jpg" alt="Icon 2"></a>
+			  <a href="https://twitter.com/"><img src="image/gallery/twiter.png" alt="Icon 3"></a>
+			</div>
+			<p class="footer-text">© 2023 Clothing Store. All rights reserved.</p>
+		</footer>
+  </body>
+</html>

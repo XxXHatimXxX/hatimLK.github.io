@@ -1,0 +1,23 @@
+
+article{
+    background-color: #4691e3;
+	border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+article h2{
+    margin-top: 0;
+    text-align: center;
+    font-size: 23.37px;
+}
+.images{
+    height: 300px;
+    width: 80%;
+}
+.flexbox{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    background-color:  #ffe26a;
+}
