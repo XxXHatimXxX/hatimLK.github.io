@@ -44,7 +44,7 @@ function checkAnswer() {
     var questions = xmlDoc.getElementsByTagName("question");
 
     // Store the user's selected answer in the XML file
-    questions[currentQuestion].getElementsByTagName("userAnswer")[0].textContent = userAnswerIndex;
+    questions[currentQuestion].getElementsByTagName("userAnswer")[0].childNodes[0].nodeValue = userAnswerIndex;
 
     var correctAnswerIndex = parseInt(questions[currentQuestion].getAttribute("correctAnswer")); // Get the correct answer index
 
@@ -76,7 +76,7 @@ function displayResult() {
     var questionText = questions[i].getElementsByTagName("text")[0].childNodes[0].nodeValue;
     var options = questions[i].getElementsByTagName("option");
     var correctAnswerIndex = parseInt(questions[i].getAttribute("correctAnswer")); // Get the correct answer index
-    var userAnswerIndex = parseInt(questions[i].getElementsByTagName("userAnswer")[0].textContent); // Get the user's answer index
+    var userAnswerIndex = parseInt(questions[i].getElementsByTagName("userAnswer")[0].childNodes[0].nodeValue); // Get the user's answer index
 
     var correctAnswer = options[correctAnswerIndex].childNodes[0].nodeValue;
     var userAnswer = options[userAnswerIndex].childNodes[0].nodeValue;
