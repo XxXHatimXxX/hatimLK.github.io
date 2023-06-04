@@ -6,6 +6,7 @@
     <option>Jacket</option>
     <option>Sweater</option>
     <option>Coat</option>
+    <userAnswer>1</userAnswer>
   </question>
   <question>
     <text>Which fabric is known for its softness, breathability, and ability to regulate body temperature?</text>
@@ -13,6 +14,7 @@
     <option>Wool</option>
     <option>Polyester</option>
     <option>Silk</option>
+    <userAnswer>2</userAnswer>
   </question>
   
   <question>
@@ -21,6 +23,7 @@
     <option>Sandals</option>
     <option>Boots</option>
     <option>loafers</option>
+    <userAnswer>3</userAnswer>
   </question>
   
   <question>
@@ -29,6 +32,7 @@
     <option>Skirt</option>
     <option>Blouse</option>
     <option>Tunic</option>
+    <userAnswer>4</userAnswer>
   </question>
   
   <question>
@@ -37,6 +41,7 @@
     <option>Tie</option>
     <option>Belt</option>
     <option>Hat</option>
+    <userAnswer>5</userAnswer>
   </question>
   
   <question>
@@ -45,5 +50,6 @@
     <option>Socks</option>
     <option>Mittens</option>
     <option>Bracelets</option>
+    <userAnswer>6</userAnswer>
   </question>
 </questions>
