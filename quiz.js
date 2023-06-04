@@ -72,14 +72,17 @@ function displayResult() {
     var questionText = questions[i].getElementsByTagName("text")[0].childNodes[0].nodeValue;
     var options = questions[i].getElementsByTagName("option");
     var correctAnswerIndex = parseInt(questions[i].getAttribute("correctAnswer")); // Get the correct answer index
-    var userAnswerIndex = null;
-
-    for (var j = 0; j < options.length; j++) {
-      if (options[j].childNodes[0].nodeValue === questions[i].getElementsByTagName("userAnswer")[0].childNodes[0].nodeValue) {
-        userAnswerIndex = j;
-        break;
-      }
-    }
+    var userAnswerIndex = parseInt(questions[i].getElementsByTagName("userAnswer")[0].childNodes[0].nodeValue); // Get the user's answer index
 
     var correctAnswer = options[correctAnswerIndex].childNodes[0].nodeValue;
-    var userAnswer = userAnswerIndex !== null ? options[userAnswerIndex].childNodes[0].
+    var userAnswer = options[userAnswerIndex].childNodes[0].nodeValue;
+
+    feedbackDiv.innerHTML += "<br>Question " + (i + 1) + ": " + questionText + "<br>";
+    feedbackDiv.innerHTML += "Correct Answer: " + correctAnswer + " (Option " + (correctAnswerIndex + 1) + ")<br>";
+    feedbackDiv.innerHTML += "Your Answer: " + userAnswer + " (Option " + (userAnswerIndex + 1) + ")<br>";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  displayQuestion();
+});
