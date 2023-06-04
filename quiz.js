@@ -42,6 +42,10 @@ function checkAnswer() {
   if (selectedOption) {
     var userAnswerIndex = parseInt(selectedOption.value); // Parse the index as an integer
     var questions = xmlDoc.getElementsByTagName("question");
+
+    // Store the user's selected answer in the XML file
+    questions[currentQuestion].getElementsByTagName("userAnswer")[0].textContent = userAnswerIndex;
+
     var correctAnswerIndex = parseInt(questions[currentQuestion].getAttribute("correctAnswer")); // Get the correct answer index
 
     if (userAnswerIndex === correctAnswerIndex) {
@@ -72,14 +76,19 @@ function displayResult() {
     var questionText = questions[i].getElementsByTagName("text")[0].childNodes[0].nodeValue;
     var options = questions[i].getElementsByTagName("option");
     var correctAnswerIndex = parseInt(questions[i].getAttribute("correctAnswer")); // Get the correct answer index
-    var userAnswerIndex = parseInt(questions[i].getElementsByTagName("userAnswer")[0].childNodes[0].nodeValue); // Get the user's answer index
+    var userAnswerIndex = parseInt(questions[i].getElementsByTagName("userAnswer")[0].textContent); // Get the user's answer index
 
     var correctAnswer = options[correctAnswerIndex].childNodes[0].nodeValue;
     var userAnswer = options[userAnswerIndex].childNodes[0].nodeValue;
 
     feedbackDiv.innerHTML += "<br>Question " + (i + 1) + ": " + questionText + "<br>";
-    feedbackDiv.innerHTML += "Correct Answer: " + correctAnswer + " (Option " + (correctAnswerIndex + 1) + ")<br>";
-    feedbackDiv.innerHTML += "Your Answer: " + userAnswer + " (Option " + (userAnswerIndex + 1) + ")<br>";
+    feedbackDiv.innerHTML += "Correct Answer: " + correctAnswer + "<br>";
+
+    if (userAnswerIndex === correctAnswerIndex) {
+      feedbackDiv.innerHTML += "Your Answer: " + userAnswer + " (Correct)<br>";
+    } else {
+      feedbackDiv.innerHTML += "Your Answer: " + userAnswer + " (Incorrect)<br>";
+    }
   }
 }
 
