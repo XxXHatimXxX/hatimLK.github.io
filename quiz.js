@@ -25,7 +25,7 @@ function displayQuestion() {
     var optionInput = document.createElement("input");
     optionInput.setAttribute("type", "radio");
     optionInput.setAttribute("name", "option");
-    optionInput.setAttribute("value", optionText);
+    optionInput.setAttribute("value", i); // Store the index as the value
     optionsDiv.appendChild(optionInput);
 
     var optionLabel = document.createElement("label");
@@ -40,11 +40,11 @@ function displayQuestion() {
 function checkAnswer() {
   var selectedOption = document.querySelector('input[name="option"]:checked');
   if (selectedOption) {
-    var userAnswer = selectedOption.value;
+    var userAnswerIndex = parseInt(selectedOption.value); // Parse the index as an integer
     var questions = xmlDoc.getElementsByTagName("question");
-    var correctAnswer = questions[currentQuestion].getElementsByTagName("option")[0].childNodes[0].nodeValue;
+    var correctAnswerIndex = parseInt(questions[currentQuestion].getAttribute("correctAnswer")); // Get the correct answer index
 
-    if (userAnswer === correctAnswer) {
+    if (userAnswerIndex === correctAnswerIndex) {
       score++;
     }
 
@@ -57,6 +57,7 @@ function checkAnswer() {
     }
   }
 }
+
 /** display the result **/
 function displayResult() {
   var resultDiv = document.getElementById("question");
@@ -70,27 +71,15 @@ function displayResult() {
   for (var i = 0; i < questions.length; i++) {
     var questionText = questions[i].getElementsByTagName("text")[0].childNodes[0].nodeValue;
     var options = questions[i].getElementsByTagName("option");
-    var correctAnswer = options[0].childNodes[0].nodeValue;
-    var userAnswer = null;
+    var correctAnswerIndex = parseInt(questions[i].getAttribute("correctAnswer")); // Get the correct answer index
+    var userAnswerIndex = null;
 
     for (var j = 0; j < options.length; j++) {
       if (options[j].childNodes[0].nodeValue === questions[i].getElementsByTagName("userAnswer")[0].childNodes[0].nodeValue) {
-        userAnswer = options[j].childNodes[0].nodeValue;
+        userAnswerIndex = j;
         break;
       }
     }
 
-    feedbackDiv.innerHTML += "<br>Question " + (i + 1) + ": " + questionText + "<br>";
-    feedbackDiv.innerHTML += "Correct Answer: " + correctAnswer + "<br>";
-
-    if (userAnswer === correctAnswer) {
-      feedbackDiv.innerHTML += "Your Answer: " + userAnswer + " (Correct)<br>";
-    } else {
-      feedbackDiv.innerHTML += "Your Answer: " + (userAnswer || "No answer provided") + " (Incorrect)<br>";
-    }
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  displayQuestion();
-});
+    var correctAnswer = options[correctAnswerIndex].childNodes[0].nodeValue;
+    var userAnswer = userAnswerIndex !== null ? options[userAnswerIndex].childNodes[0].
